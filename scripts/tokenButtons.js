@@ -4,93 +4,54 @@ const placeTokenLinkButtons = () => {
     const buttonsContainer = globalThis.getElementByXpath("//*[@id=\"ContentPlaceHolder1_divSummary\"]/div[1]/div[2]")
     const lastItem = buttonsContainer.children[buttonsContainer.children.length - 1]
 
-    const dsButton = document.createElement("a")
-    dsButton.className = "btn btn-sm btn-white btn-ds"
-    dsButton.innerText = "DEX Screener"
-    dsButton.href = `https://dexscreener.com/ethereum/${tokenContract}`
-    dsButton.target = "_blank"
-    buttonsContainer.insertBefore(dsButton, lastItem)
+    placeButton(buttonsContainer, lastItem, "btn-ds", "DEX Screener",
+        `https://dexscreener.com/ethereum/${tokenContract}`)
 
-    const dtButton = document.createElement("a")
-    dtButton.className = "btn btn-sm btn-white btn-dt"
-    dtButton.innerText = "DEXTools"
-    dtButton.href = `https://www.dextools.io/app/en/ether/pair-explorer/${tokenContract}`
-    dtButton.target = "_blank"
-    buttonsContainer.insertBefore(dtButton, lastItem)
+    placeButton(buttonsContainer, lastItem, "btn-dt", "DEXTools",
+        `https://www.dextools.io/app/en/ether/pair-explorer/${tokenContract}`)
 
-    const dexSpyButton = document.createElement("a")
-    dexSpyButton.className = "btn btn-sm btn-white btn-dexspy"
-    dexSpyButton.innerText = "DexSpy"
-    dexSpyButton.href = `https://dexspy.io/eth/token/${tokenContract}`
-    dexSpyButton.target = "_blank"
-    buttonsContainer.insertBefore(dexSpyButton, lastItem)
+    placeButton(buttonsContainer, lastItem, "btn-dexspy", "DexSpy",
+        `https://dexspy.io/eth/token/${tokenContract}`)
 
-    const definedButton = document.createElement("a")
-    definedButton.className = "btn btn-sm btn-white btn-defined"
-    definedButton.innerText = "Defined"
-    definedButton.href = `https://www.defined.fi/eth/${tokenContract}`
-    definedButton.target = "_blank"
-    buttonsContainer.insertBefore(definedButton, lastItem)
+    placeButton(buttonsContainer, lastItem, "btn-defined", "Defined",
+        `https://www.defined.fi/eth/${tokenContract}`)
 
-    const coinScanButton = document.createElement("a")
-    coinScanButton.className = "btn btn-sm btn-white btn-coinscan"
-    coinScanButton.innerText = "CoinScan"
-    coinScanButton.href = `https://www.coinscan.com/tokens/eth/${tokenContract}`
-    coinScanButton.target = "_blank"
-    buttonsContainer.insertBefore(coinScanButton, lastItem)
+    placeButton(buttonsContainer, lastItem, "btn-coinscan", "CoinScan",
+        `https://www.coinscan.com/tokens/eth/${tokenContract}`)
 
-    const aegisButton = document.createElement("a")
-    aegisButton.className = "btn btn-sm btn-white btn-aegis"
-    aegisButton.innerText = "Aegis Check"
-    aegisButton.href = `https://analyze.aegisweb3.com/eth/${tokenContract}`
-    aegisButton.target = "_blank"
-    buttonsContainer.insertBefore(aegisButton, lastItem)
+    placeButton(buttonsContainer, lastItem, "btn-aegis", "Aegis Check",
+        `https://analyze.aegisweb3.com/eth/${tokenContract}`)
 
-    const uniswapButton = document.createElement("a")
-    uniswapButton.className = "btn btn-sm btn-white btn-uniswap"
-    uniswapButton.innerText = "Uniswap"
-    uniswapButton.href = `https://app.uniswap.org/#/swap?outputCurrency=${tokenContract}&inputCurrency=ETH`
-    uniswapButton.target = "_blank"
-    buttonsContainer.insertBefore(uniswapButton, lastItem)
+    placeButton(buttonsContainer, lastItem, "btn-uniswap", "Uniswap",
+        `https://app.uniswap.org/#/swap?outputCurrency=${tokenContract}&inputCurrency=ETH`)
 
-    const maestroButton = document.createElement("a")
-    maestroButton.className = "btn btn-sm btn-white btn-maestro"
-    maestroButton.innerText = "Maestro"
-    maestroButton.href = `https://t.me/MaestroSniperBot?start=${tokenContract}`
-    maestroButton.target = "_blank"
-    buttonsContainer.insertBefore(maestroButton, lastItem)
+    placeButton(buttonsContainer, lastItem, "btn-maestro", "Maestro",
+        `https://t.me/MaestroSniperBot?start=${tokenContract}`)
 
-    const thunderButton = document.createElement("a")
-    thunderButton.className = "btn btn-sm btn-white btn-thunder"
-    thunderButton.innerText = "Thunder"
-    thunderButton.href = `http://localhost:7777/quickTask?contract=${tokenContract}&function=customSwap&params=DEFAULT&price=DEFAULT&mode=SAFE`
-    thunderButton.target = "_blank"
-    buttonsContainer.insertBefore(thunderButton, lastItem)
+    placeButton(buttonsContainer, lastItem, "btn-thunder", "Thunder",
+        `http://localhost:7777/quickTask?contract=${tokenContract}&function=customSwap&params=DEFAULT&price=DEFAULT&mode=SAFE`)
 
-    const senseiButton = document.createElement("a")
-    senseiButton.className = "btn btn-sm btn-white btn-sensei"
-    senseiButton.innerText = "Sensei"
-    senseiButton.href = `https://app.sensei.win/defi?token=${tokenContract}`
-    senseiButton.target = "_blank"
-    buttonsContainer.insertBefore(senseiButton, lastItem)
+    placeButton(buttonsContainer, lastItem, "btn-sensei", "Sensei",
+        `https://app.sensei.win/defi?token=${tokenContract}`)
 
-    const waifuButton = document.createElement("a")
-    waifuButton.className = "btn btn-sm btn-white btn-waifu"
-    waifuButton.innerText = "Waifu"
-    waifuButton.href = `http://localhost:7780/uniswapqt?contractAddress=${tokenContract}&mode=v2&group=Default`
-    waifuButton.target = "_blank"
-    buttonsContainer.insertBefore(waifuButton, lastItem)
+    placeButton(buttonsContainer, lastItem, "btn-waifu", "Waifu",
+        `http://localhost:7780/uniswapqt?contractAddress=${tokenContract}&mode=v2&group=Default`)
 
-    const agonyButton = document.createElement("a")
-    agonyButton.className = "btn btn-sm btn-white btn-agony"
-    agonyButton.innerText = "Agony"
-    agonyButton.href = `http://localhost:6969/tasks/qt/defi?action=buy&token=${tokenContract}&slippage=5&value=0.05`
-    agonyButton.target = "_blank"
-    buttonsContainer.insertBefore(agonyButton, lastItem)
+    placeButton(buttonsContainer, lastItem, "btn-agony", "Agony",
+        `http://localhost:6969/tasks/qt/defi?action=buy&token=${tokenContract}&slippage=5&value=0.05`)
 }
 
 const getTokenContractAddress = () => {
     return document.querySelector("a[data-clipboard-text]").getAttribute("data-clipboard-text")
+}
+
+const placeButton = (container, lastItem, className, innerText, href) => {
+    const newButton = document.createElement("a")
+    newButton.className = `btn btn-sm btn-white ${className}`
+    newButton.innerText = innerText
+    newButton.href = href
+    newButton.target = "_blank"
+    container.insertBefore(newButton, lastItem)
 }
 
 placeTokenLinkButtons();
