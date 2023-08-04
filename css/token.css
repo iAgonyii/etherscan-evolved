@@ -1,5 +1,6 @@
 .btn-ds {
     background-color: #000000 !important;
+    color: white !important;
 }
 
 .btn-dt {
@@ -9,6 +10,7 @@
 
 .btn-dexspy {
     background-color: midnightblue !important;
+    color: white !important;
 }
 
 .btn-defined {
@@ -28,22 +30,27 @@
 
 .btn-uniswap {
     background-color: #e80371 !important;
+    color: white !important;
 }
 
 .btn-maestro {
     background-color: #222f51 !important;
+    color: white !important;
 }
 
 .btn-thunder {
     background-color: black !important;
+    color: white !important;
 }
 
 .btn-sensei {
     background-color: #f20013 !important;
+    color: white !important;
 }
 
 .btn-waifu {
     background-color: #020113 !important;
+    color: white !important;
 }
 
 .btn-agony {
