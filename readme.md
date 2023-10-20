@@ -10,13 +10,13 @@ You will manually have to install updates until the extension is published on th
 
 ![Download as ZIP](images/instructions_0.png)
 
-3. Extract the ZIP file to a folder somewhere on your PC.
+3. Extract the folder in the ZIP file to somewhere on your PC.
 4. Open the manage extensions page of your browser.
 5. Enable developer mode and click on "Load unpacked" as shown in the image below.
 
 ![Load unpacked](images/instructions_1.png)
 
-6. Select the folder you extracted the ZIP file to.
+6. Select the folder from the extracted ZIP file.
 7. The extension should now show up as shown in the image below.
 
 ![Extension](images/instructions_2.png)
