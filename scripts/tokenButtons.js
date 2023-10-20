@@ -29,7 +29,7 @@ const placeTokenLinkButtons = () => {
         `https://t.me/MaestroSniperBot?start=${tokenContract}`)
 
     placeButton(buttonsContainer, lastItem, "btn-thunder", "Thunder",
-        `http://localhost:7777/quickTask?contract=${tokenContract}&function=customSwap&params=DEFAULT&price=DEFAULT&mode=SAFE`)
+        `https://thunder.eversify.com/terminal?address=${tokenContract}`)
 
     placeButton(buttonsContainer, lastItem, "btn-sensei", "Sensei",
         `https://app.sensei.win/defi?token=${tokenContract}`)
@@ -38,7 +38,7 @@ const placeTokenLinkButtons = () => {
         `http://localhost:7780/uniswapqt?contractAddress=${tokenContract}&mode=v2&group=Default`)
 
     placeButton(buttonsContainer, lastItem, "btn-agony", "Agony",
-        `http://localhost:6969/tasks/qt/defi?action=buy&token=${tokenContract}&slippage=5&value=0.05`)
+        `http://localhost:6969/tasks/qt/defi?token=${tokenContract}`)
 }
 
 const getTokenContractAddress = () => {
